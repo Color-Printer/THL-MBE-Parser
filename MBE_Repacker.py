@@ -6,7 +6,7 @@ from io import BytesIO
 
 COLUMN_INFO_BY_NAME = {
     'Int':      {'name': 'Int', 'code': 0x2, 'size': 4, 'format': '<i'},
-    'Bool':     {'name': 'Bool', 'code': 0x9, 'size': 4, 'format': '=?3x'},
+    'IntID':    {'name': 'IntID', 'code': 0x9, 'size': 4, 'format': '<i'},
     'Byte':     {'name': 'Byte', 'code': 0x4, 'size': 1, 'format': '<b'},
     'Float':    {'name': 'Float', 'code': 0x5, 'size': 4, 'format': '<f'},
     'String':   {'name': 'String', 'code': 0x7, 'size': 8, 'format': '<q'},
@@ -135,15 +135,10 @@ def repack_mbe(input_dir, output_filepath):
                         else:
                             value = 0 # Default value
                             if value_str: # Handle empty cells in CSV
-                                if col_info['name'] in ('Int', 'Byte', 'ShortInt'):
+                                if col_info['name'] in ('Int', 'IntID, 'Byte', 'ShortInt'):
                                     value = int(value_str)
                                 elif col_info['name'] == 'Float':
                                     value = float(value_str)
-                                elif col_info['name'] == 'Bool':
-                                    if value_str in ('True', 'true', '1'):
-                                        value = 1
-                                    else:
-                                        value = 0
                             
                             row_buffer.write(struct.pack(col_info['format'], value))
                     
