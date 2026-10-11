@@ -5,7 +5,7 @@ Thanks to Ahtheerr for making the original version of this script...presumably. 
 
 The original version of this script was not perfect. It could not handle certain things such as two-byte short values, and did not handle table offsets correctly (in a way that only affected about 1% of the MBE files - go figure). I have made adjustments (including rewriting comments and print statements from Spanish into English), so now both the Parser and the Repacker scripts work on ***every MBE data file in the game***. This includes the text ones, too.
 
-The Repacker script currently does not work with files unpacked with MVGLToolsCLI. I *might* add this functionality later but for now it can only repack csv files that have been dumped via the Parser script.
+The Repacker script currently does not work with CSV files unpacked from MBEs with MVGLToolsCLI. I *might* add this functionality later but for now it can only repack csv files that have been dumped via the Parser script.
 
 This script requires **python** to run. *(At least version 3.8 should be good? I think?)*
 
