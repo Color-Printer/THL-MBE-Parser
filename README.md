@@ -10,6 +10,8 @@ The Repacker script currently does not work with CSV files unpacked from MBEs wi
 This script requires **python** to run. *(At least version 3.8 should be good? I think?)*
 
 ## Usage
+Note that MBEs will need to be unpacked from the MVGL archive files. Might I suggest [MVGLTools](https://github.com/SydMontague/MVGLTools)? (Again, just don't use the MBE unpacking features for right now)
+
 ### MBE_Parser.py
 `python MBE_Parser.py <filepath.mbe>`
 
