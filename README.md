@@ -1,7 +1,9 @@
 # THL-MBE-Parser
 For unpacking and repacking MBE data files from The Hundred Line.
 
-I'm not sure who made the original version of this script - the repo(s) on GitHub where I got it seems to have disappeared. The original version was not perfect. It could not handle certain things such as two-byte short values, and did not handle table offsets correctly (in a way that only affected about 1% of the MBE files - go figure). I have made adjustments (including rewriting comments and print statements from Spanish into English), so now both the Parser and the Repacker scripts work on ***every MBE data file in the game***. This includes the text ones, too.
+Thanks to Ahtheerr for making the original version of this script...presumably. That's where I got it from, though the repo is now gone.
+
+The original version of this script was not perfect. It could not handle certain things such as two-byte short values, and did not handle table offsets correctly (in a way that only affected about 1% of the MBE files - go figure). I have made adjustments (including rewriting comments and print statements from Spanish into English), so now both the Parser and the Repacker scripts work on ***every MBE data file in the game***. This includes the text ones, too.
 
 The Repacker script currently does not work with files unpacked with MVGLToolsCLI. I *might* add this functionality later but for now it can only repack csv files that have been dumped via the Parser script.
 
