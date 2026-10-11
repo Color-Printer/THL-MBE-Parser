@@ -5,7 +5,7 @@ import csv
 
 COLUMN_TYPES = {
     0x2: {'name': 'Int',      'size': 4, 'format': '<i'},
-    0x9: {'name': 'Bool',     'size': 4, 'format': '=?3x'},
+    0x9: {'name': 'IntID',    'size': 4, 'format': '<i'},
     0x4: {'name': 'Byte',     'size': 1, 'format': '<b'},
     0x5: {'name': 'Float',    'size': 4, 'format': '<f'},
     0x7: {'name': 'String',   'size': 8, 'format': '<q'},
