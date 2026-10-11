@@ -135,7 +135,7 @@ def repack_mbe(input_dir, output_filepath):
                         else:
                             value = 0 # Default value
                             if value_str: # Handle empty cells in CSV
-                                if col_info['name'] in ('Int', 'IntID, 'Byte', 'ShortInt'):
+                                if col_info['name'] in ('Int', 'IntID', 'Byte', 'ShortInt'):
                                     value = int(value_str)
                                 elif col_info['name'] == 'Float':
                                     value = float(value_str)
